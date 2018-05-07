@@ -1,0 +1,62 @@
+﻿@using Project_Final_354.Models;
+@*@model HomeModel*@
+
+
+@{ 
+//HomeModel.ViewModel value = new HomeModel.ViewModel();
+}
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@*@foreach(var item in Model.game)
+{
+    <li>
+        @item
+    </li>
+}*@
+
+
+<h2>@ViewBag.Message</h2>
+
+@*<p>Client List</p>*@
+
+@*<p>
+  
+</p>*@
+
+@*<table>
+
+    <tr>
+        <td>Games</td>
+    </tr>*@
+    @*@foreach(Project_Final_354.Game item in Model.Games)
+    {
+        <tr>
+            <td>@item.GameName</td>
+        </tr>
+    }*@
+@*</table>*@
+
+<body>
+    <h1>This is the normal lookup table</h1>
+    <p>@Html.ActionLink("Game Genre", "Index", "GameGenres")</p>
+
+    <br />
+
+    <h1>This is the normal Drop Downlist of lookup table</h1>
+    <p>@Html.ActionLink("Games", "Index", "Games")</p>
+    <p>@Html.ActionLink("Clients", "Index", "Clients")</p>
+
+
+    @*<p>@Html.ActionLink("Fuzzy Search Games", "~/Views/FuzzySearchGames.aspx")</p>*@
+    @*<a href="~/Views/FuzzySearchGames.aspx" >Fuzzy Search Games</a>*@
+    <a id="FuzzyLinkID" href="~/Views/FuzzySearchGames.aspx">Fuzzy Search Games</a>
+
+    @*@{ 
+        Response.Redirect("FuzzySearchGames.aspx");
+    }*@
+</body>
+
+

@@ -11,7 +11,9 @@ namespace Project_Final_354
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
     public partial class GameGenre
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +23,8 @@ namespace Project_Final_354
         }
     
         public int GameGenreID { get; set; }
+        
+        [Remote("isExists","GameGenre",ErrorMessage ="Game genre already exits")]
         public string GameGenre1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
